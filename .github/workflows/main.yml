@@ -1,0 +1,33 @@
+name: Auto Generate App Index
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'apps/**'  # 只有修改了 apps 文件夹时才运行
+  workflow_dispatch: # 允许手动点运行
+
+permissions:
+  contents: write # 重要：允许 Action 修改仓库文件
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Run Aggregator Script
+        run: node scripts/generate-index.js
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data.json
+          git commit -m "docs: update data.json [skip ci]" || echo "No changes to commit"
+          git push
