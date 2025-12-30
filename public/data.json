@@ -1,12 +1,13 @@
 {
   "version": "1.0",
-  "updated_at": "2025-12-30T09:46:32.435Z",
+  "updated_at": "2025-12-30T09:53:01.134Z",
   "apps": [
     {
       "id": "qbittorrent",
       "name": "qBittorrent",
-      "category": "Download",
+      "category": "download",
       "website": "https://jellyfin.org",
+      "description": "qBittorrent 是一个跨平台的免费开源 BitTorrent 客户端，提供 Web UI 远程管理，非常适合在 NAS 上运行。",
       "github": "https://github.com/jellyfin/jellyfin",
       "tags": [
         "BT",
