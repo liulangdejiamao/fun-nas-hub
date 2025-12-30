@@ -1,7 +1,35 @@
 {
   "version": "1.0",
-  "updated_at": "2025-12-30T09:56:33.197Z",
+  "updated_at": "2025-12-30T14:40:39.797Z",
   "apps": [
+    {
+      "id": "jellyfin",
+      "name": "Jellyfin",
+      "category": "media",
+      "website": "https://jellyfin.org",
+      "description": "Jellyfin 是一个自由软件媒体系统，可让您控制媒体的整理和流式传输。它是 Plex 和 Emby 的开源替代方案，完全免费且无订阅费。",
+      "github": "https://github.com/jellyfin/jellyfin",
+      "tags": [
+        "媒体服务器",
+        "影音",
+        "转码"
+      ],
+      "brief": "功能强大的家庭多媒体影音中心。",
+      "icon": "icon.png",
+      "screenshots": [
+        "screenshot1.png",
+        "screenshot2.png"
+      ],
+      "resource_expectation": {
+        "cpu_usage": "Medium",
+        "ram_usage": "High",
+        "min_ram": "1GB"
+      },
+      "install_guides": {
+        "docker_cli": "docker run -d --name jellyfin -p 8096:8096 -v /path/to/config:/config -v /path/to/media:/media --restart unless-stopped jellyfin/jellyfin",
+        "docker_compose": "services:\n  jellyfin:\n    image: jellyfin/jellyfin\n    container_name: jellyfin\n    network_mode: host\n    volumes:\n      - /path/to/config:/config\n      - /path/to/media:/media\n    restart: unless-stopped"
+      }
+    },
     {
       "id": "qbittorrent",
       "name": "qBittorrent",
