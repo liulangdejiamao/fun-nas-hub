@@ -1,11 +1,13 @@
 {
   "version": "1.0",
-  "updated_at": "2025-12-30T08:58:16.877Z",
+  "updated_at": "2025-12-30T09:46:32.435Z",
   "apps": [
     {
       "id": "qbittorrent",
       "name": "qBittorrent",
       "category": "Download",
+      "website": "https://jellyfin.org",
+      "github": "https://github.com/jellyfin/jellyfin",
       "tags": [
         "BT",
         "PT",
@@ -13,6 +15,10 @@
       ],
       "brief": "经典的 BT 下载工具。",
       "icon": "icon.png",
+      "screenshots": [
+        "screenshot1.png",
+        "screenshot2.png"
+      ],
       "resource_expectation": {
         "cpu_usage": "Low",
         "ram_usage": "Medium",
