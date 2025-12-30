@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "updated_at": "2025-12-30T08:58:16.877Z",
+  "apps": [
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "category": "Download",
+      "tags": [
+        "BT",
+        "PT",
+        "下载"
+      ],
+      "brief": "经典的 BT 下载工具。",
+      "icon": "icon.png",
+      "resource_expectation": {
+        "cpu_usage": "Low",
+        "ram_usage": "Medium",
+        "min_ram": "128MB"
+      },
+      "install_guides": {
+        "docker_cli": "docker run -d --name=qbittorrent -p 8080:8080 lscr.io/linuxserver/qbittorrent:latest",
+        "docker_compose": "services:\n  qbittorrent:\n    image: lscr.io/linuxserver/qbittorrent:latest\n    ports:\n      - 8080:8080"
+      }
+    }
+  ]
+}
